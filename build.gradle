@@ -14,7 +14,9 @@ jar {
 	group = this.group
 	version = this.version
 }
-
+plugins {
+	id "com.heroku.sdk.heroku-gradle" version "0.2.0"
+}
 bootRun {
 	addResources = true
 }
@@ -31,9 +33,6 @@ repositories {
 }
 task stage {
 	dependsOn build
-}
-plugins {
-	id "com.heroku.sdk.heroku-gradle" version "0.2.0"
 }
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
