@@ -1,3 +1,9 @@
+plugins {
+	id "com.heroku.sdk.heroku-gradle" version "0.2.0"
+	id "java"
+	id "eclipse"
+	id "org.springframework.boot"
+}
 buildscript {
 	ext {
 		springBootVersion = '1.5.8.RELEASE'
@@ -13,12 +19,6 @@ jar {
 	baseName = this.name
 	group = this.group
 	version = this.version
-}
-plugins {
-	id "com.heroku.sdk.heroku-gradle" version "0.2.0"
-	id "java"
-	id "eclipse"
-	id "org.springframework.boot"
 }
 bootRun {
 	addResources = true
@@ -40,6 +40,7 @@ task stage {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile 'com.heroku.sdk:heroku-deploy:1.1.1'
 	runtime('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
