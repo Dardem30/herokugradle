@@ -5,10 +5,12 @@ spring:
   database: postgresql
   show-sql: true
   hibernate:
-   ddl-auto: update
+   ddl-auto: create
  datasource:
+#  ssl: true
+#  sslfactory: org.postgresql.ssl.NonValidatingFactory
   driver-class-name: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5050/
-  username: postgres
-  password: root
-  name: postres
+  url: jdbc:postgresql://ec2-50-16-202-213.compute-1.amazonaws.com:5432/dafa8mjfo0ut9v?sslmode=require&user=mdsmrduqfjwhpd&password=f4aedbfb3816f526f78f566b84877328295976628fb20ba8b8dcb220b7132c16
+  username: mdsmrduqfjwhpd
+  password: f4aedbfb3816f526f78f566b84877328295976628fb20ba8b8dcb220b7132c16
+  name: dafa8mjfo0ut9v
