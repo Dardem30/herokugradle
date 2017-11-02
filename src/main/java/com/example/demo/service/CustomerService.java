@@ -19,4 +19,7 @@ public class CustomerService {
     public List<Customer> findAll(){
         return (List<Customer>) castomerDAO.findAll();
     }
+    public void saveCustomer(Customer customer){
+        castomerDAO.save(customer);
+    }
 }

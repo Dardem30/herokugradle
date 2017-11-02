@@ -17,5 +17,11 @@
         <!--<td th:text="${customer.lastname}"></td>-->
     </tr>
 </table>
+<form action="#" th:action="@{/saveCustomer}" th:object="${customer}" method="post">
+    <input type="text" th:field="*{id}" />
+    <input type="text" th:field="*{firstname}" />
+    <input type="text" th:field="*{lastname}" />
+    <input type="submit" value="ok" />
+</form>
 </body>
 </html>
