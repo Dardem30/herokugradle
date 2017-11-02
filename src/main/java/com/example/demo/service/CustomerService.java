@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.DAO.CastomerDAO;
 import com.example.demo.model.Customer;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

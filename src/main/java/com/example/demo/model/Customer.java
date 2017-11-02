@@ -1,5 +1,6 @@
 package com.example.demo.model;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "customer")
 @Data
+@NoArgsConstructor
 public class Customer {
     @Id
     @Column(name = "id")
@@ -16,8 +18,8 @@ public class Customer {
     private int id;
     @Basic
     @Column(name = "firstname")
-    private String firstName;
+    private String firstname;
     @Basic
     @Column(name = "lastname")
-    private String lastName;
+    private String lastname;
 }
